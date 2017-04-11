@@ -106,7 +106,7 @@ def stanford_ie(input_filename, verbose=True, generate_graphviz=False):
     absolute_path_to_script = os.path.dirname(os.path.realpath(__file__)) + '/'
     command = 'cd {};'.format(absolute_path_to_script)
     command += 'cd {}; {} -mx4g -cp "stanford-openie.jar:stanford-openie-models.jar:lib/*" ' \
-               'edu.stanford.nlp.naturalli.OpenIE {} -format ollie > {}'. \
+               'edu.stanford.nlp.naturalli.OpenIE {} -format default > {}'. \
         format(STANFORD_IE_FOLDER, JAVA_BIN_PATH, new_filename, out)
 
     if verbose:
